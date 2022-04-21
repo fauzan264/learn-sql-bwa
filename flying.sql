@@ -1,12 +1,27 @@
 -- create database
-create database flying;
+CREATE DATABASE flying;
 
 -- use db flying
-use flying;
+USE flying;
 
 -- create table company
-create table company (
-id int not null auto_increment,
-name varchar(100) not null,
-primary key(id)
-) engine = innodb;
+CREATE TABLE company (
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    PRIMARY KEY(id)
+) ENGINE = InnoDB;
+
+-- mengetahui rincian table
+DESC company;
+DESCRIBE company;
+
+-- create table customer
+CREATE TABLE customer(
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(150) NOT NULL,
+    email VARCHAR(150) NOT NULL,
+    phone VARCHAR(50),
+    address TEXT,
+    gender ENUM("Laki-Laki", "Perempuan"),
+    PRIMARY KEY(id)
+) ENGINE = InnoDB;

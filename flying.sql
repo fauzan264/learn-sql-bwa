@@ -41,3 +41,7 @@ AFTER email;
 -- update column npwp in table customer
 ALTER TABLE customer
 MODIFY COLUMN npwp INT(25);
+
+-- change column npwp to ktp
+ALTER TABLE customer
+MODIFY COLUM npwp ktp VARCHAR(100);

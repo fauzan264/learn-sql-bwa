@@ -44,4 +44,8 @@ MODIFY COLUMN npwp INT(25);
 
 -- change column npwp to ktp
 ALTER TABLE customer
-MODIFY COLUM npwp ktp VARCHAR(100);
+MODIFY COLUMN npwp ktp VARCHAR(100);
+
+-- delete column ktp
+ALTER TABLE customer
+DROP COLUMN ktp;

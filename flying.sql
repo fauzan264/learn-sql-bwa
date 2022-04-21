@@ -37,3 +37,7 @@ CREATE TABLE IF NOT EXISTS location (
 ALTER TABLE customer
 ADD COLUMN npwp VARCHAR(150)
 AFTER email;
+
+-- update column npwp in table customer
+ALTER TABLE customer
+MODIFY COLUMN npwp INT(25);

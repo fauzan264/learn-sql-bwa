@@ -5,9 +5,9 @@ CREATE DATABASE flying;
 USE flying;
 
 -- create table company
-CREATE TABLE company (
+CREATE TABLE IF NOT EXISTS company (
     id INT NOT NULL AUTO_INCREMENT,
-    name VARCHAR(100) NOT NULL,
+    name VARCHAR(150) NOT NULL,
     PRIMARY KEY(id)
 ) ENGINE = InnoDB;
 
@@ -16,7 +16,7 @@ DESC company;
 DESCRIBE company;
 
 -- create table customer
-CREATE TABLE customer(
+CREATE TABLE IF NOT EXISTS customer(
     id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(150) NOT NULL,
     email VARCHAR(150) NOT NULL,
@@ -24,4 +24,10 @@ CREATE TABLE customer(
     address TEXT,
     gender ENUM("Laki-Laki", "Perempuan"),
     PRIMARY KEY(id)
+) ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS location(
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(150) NOT NULL,
+    PRIMARY KEY(id) 
 ) ENGINE = InnoDB;

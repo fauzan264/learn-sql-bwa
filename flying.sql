@@ -16,7 +16,7 @@ DESC company;
 DESCRIBE company;
 
 -- create table customer
-CREATE TABLE IF NOT EXISTS customer(
+CREATE TABLE IF NOT EXISTS customer (
     id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(150) NOT NULL,
     email VARCHAR(150) NOT NULL,
@@ -26,8 +26,14 @@ CREATE TABLE IF NOT EXISTS customer(
     PRIMARY KEY(id)
 ) ENGINE = InnoDB;
 
-CREATE TABLE IF NOT EXISTS location(
+-- create table location
+CREATE TABLE IF NOT EXISTS location (
     id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(150) NOT NULL,
     PRIMARY KEY(id) 
 ) ENGINE = InnoDB;
+
+-- add column npwp in table customer
+ALTER TABLE customer
+ADD COLUMN npwp VARCHAR(150)
+AFTER email;
